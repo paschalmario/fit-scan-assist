@@ -57,6 +57,20 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        fitscan: {
+          surface: "hsl(var(--fitscan-surface))",
+          "surface-elevated": "hsl(var(--fitscan-surface-elevated))",
+          "border-subtle": "hsl(var(--fitscan-border-subtle))",
+          accent: "hsl(var(--fitscan-accent))",
+          "accent-foreground": "hsl(var(--fitscan-accent-foreground))",
+          success: "hsl(var(--fitscan-success))",
+          "success-foreground": "hsl(var(--fitscan-success-foreground))",
+          "scanner-bg": "hsl(var(--fitscan-scanner-bg))",
+          "scanner-overlay": "hsl(var(--fitscan-scanner-overlay))",
+          "code-bg": "hsl(var(--fitscan-code-bg))",
+          "code-foreground": "hsl(var(--fitscan-code-foreground))",
+          "code-muted": "hsl(var(--fitscan-code-muted))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,25 +79,28 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "scan-line": {
+          "0%": { top: "10%" },
+          "50%": { top: "85%" },
+          "100%": { top: "10%" },
+        },
+        "pulse-ring": {
+          "0%": { transform: "scale(1)", opacity: "0.6" },
+          "100%": { transform: "scale(1.4)", opacity: "0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "scan-line": "scan-line 3s ease-in-out infinite",
+        "pulse-ring": "pulse-ring 1.5s ease-out infinite",
       },
     },
   },
